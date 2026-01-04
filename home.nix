@@ -33,7 +33,7 @@
     xdg-utils
     thunar
     brightnessctl
-    wpctl
+    wireplumber
     playerctl
 
     # Fonts
