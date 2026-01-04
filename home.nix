@@ -7,7 +7,6 @@
 
   # Environment variables for Wayland/Hyprland
   home.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
   };
 
@@ -36,6 +35,9 @@
     wireplumber
     playerctl
 
+    # Cursor theme
+    phinger-cursors
+
     # Fonts
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
@@ -49,6 +51,13 @@
   home.file = {
     ".config/hypr/hyprland.conf".source = ./config/hypr/hyprland.conf;
     ".config/kitty/kitty.conf".source = ./config/kitty/kitty.conf;
+    ".config/waybar/config".source = ./config/waybar/config.jsonc;
+    ".config/waybar/style.css".source = ./config/waybar/style.css;
+  };
+
+  # Configure waybar
+  programs.waybar = {
+    enable = true;
   };
 
   # Enable Home Manager
