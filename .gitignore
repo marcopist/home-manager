@@ -12,3 +12,14 @@ result-*
 *.swo
 *~
 .DS_Store
+
+# Secrets and credentials
+gh/hosts.yml
+gh/config.yml
+ssh/
+gnupg/
+*.pem
+*.key
+credentials.json
+token
+auth_token

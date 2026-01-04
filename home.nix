@@ -31,6 +31,10 @@
     slurp
     wl-clipboard
     xdg-utils
+    dolphin
+    brightnessctl
+    wpctl
+    playerctl
 
     # Fonts
     nerd-fonts.fira-code
@@ -40,6 +44,12 @@
 
   # Enable fontconfig
   fonts.fontconfig.enable = true;
+
+  # Link configuration files
+  home.file = {
+    ".config/hypr/hyprland.conf".source = ./config/hypr/hyprland.conf;
+    ".config/kitty/kitty.conf".source = ./config/kitty/kitty.conf;
+  };
 
   # Enable Home Manager
   programs.home-manager.enable = true;
