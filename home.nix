@@ -156,16 +156,10 @@
   # Configure swayidle
   services.swayidle = {
     enable = true;
-    events = [
-      {
-        event = "before-sleep";
-        command = "${pkgs.hyprlock}/bin/hyprlock";
-      }
-      {
-        event = "after-resume";
-        command = "hyprctl dispatch dpms on";
-      }
-    ];
+    events = {
+      before-sleep = "${pkgs.hyprlock}/bin/hyprlock";
+      after-resume = "hyprctl dispatch dpms on";
+    };
     timeouts = [
       {
         timeout = 900; # 15 minutes
