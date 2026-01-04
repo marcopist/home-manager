@@ -33,7 +33,6 @@
     gh
 
     # GUI applications
-    firefox
 
     # Wayland/Hyprland tools
     hyprland
@@ -73,6 +72,17 @@
   # Configure waybar
   programs.waybar = {
     enable = true;
+  };
+
+  # Configure Firefox
+  programs.firefox = {
+    enable = true;
+    profiles.default = {
+      settings = {
+        "ui.systemUsesDarkTheme" = 1;
+        "browser.in-content.dark-mode" = true;
+      };
+    };
   };
 
   # Enable Home Manager
