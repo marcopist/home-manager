@@ -54,29 +54,29 @@
           monitor = "";
           text = "cmd[update:1000] echo \"$(date +%H:%M:%S)\"";
           color = "0xFFFFFFFF";
-          font_size = 72;
+          font_size = 48;
           font_family = "JetBrainsMono Nerd Font";
-          position = "0, 80";
+          position = "0, -80";
           halign = "center";
-          valign = "top";
+          valign = "center";
         }
         {
           monitor = "";
           text = "cmd[update:60000] echo \"$(date +\"%A, %B %d\")\"";
           color = "0xFFFFFFFF";
-          font_size = 20;
+          font_size = 16;
           font_family = "JetBrainsMono Nerd Font";
-          position = "0, 160";
+          position = "0, -30";
           halign = "center";
-          valign = "top";
+          valign = "center";
         }
         {
           monitor = "";
           text = "Welcome Marco";
           color = "0xFFFFFFFF";
-          font_size = 28;
+          font_size = 24;
           font_family = "JetBrainsMono Nerd Font";
-          position = "0, -200";
+          position = "0, 50";
           halign = "center";
           valign = "center";
         }
