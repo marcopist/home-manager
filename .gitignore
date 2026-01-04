@@ -1,0 +1,14 @@
+# Build outputs
+result
+result-*
+
+# Nix store
+.nix-profile
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
