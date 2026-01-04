@@ -116,41 +116,23 @@
       input-field = [
         {
           monitor = "";
-          size = {
-            width = 200;
-            height = 50;
-          };
+          size = "200, 50";
+          position = "0, 0";
           outline_thickness = 3;
           dots_size = 0.2;
           dots_spacing = 0.2;
           dots_center = true;
-          dots_rounding = -1;
-          outer_color = "rgb(151515)";
-          inner_color = "rgb(200, 200, 200)";
-          font_color = "rgb(10, 10, 10)";
+          outer_color = "0xFF1A1A1AFF";
+          inner_color = "0xFFC8C8C8FF";
+          font_color = "0xFF0A0A0AFF";
           fade_on_empty = true;
           fade_timeout = 1000;
           placeholder_text = "<i>Password...</i>";
           hide_input = false;
-          rounding = -1;
-          check_color = "rgb(204, 136, 34)";
-          fail_color = "rgb(204, 55, 55)";
-          fail_text = "<i>$ATTEMPTS Failed</i>";
+          check_color = "0xFFCC8822FF";
+          fail_color = "0xFFCC3737FF";
+          fail_text = "<i>$FAIL</i>";
           fail_timeout = 2000;
-          fail_transition = 300;
-          capslock_color = -1;
-          numlock_color = -1;
-          bothlock_color = -1;
-          invert_numlock = false;
-          swap_font_color = false;
-          shadow_passes = 2;
-          shadow_size = 10;
-          shadow_color = "rgba(0, 0, 0, 1.0)";
-          shadow_boost = 1.2;
-          position = {
-            x = 0;
-            y = 0;
-          };
           halign = "center";
           valign = "center";
         }
@@ -160,13 +142,10 @@
         {
           monitor = "";
           text = "cmd[update:1000] echo \"$(date +%H:%M:%S)\"";
-          color = "rgba(255, 255, 255, 1.0)";
+          color = "0xFFFFFFFFFF";
           font_size = 55;
           font_family = "FiraCode Nerd Font";
-          position = {
-            x = 0;
-            y = 80;
-          };
+          position = "0, 80";
           halign = "center";
           valign = "top";
         }
