@@ -48,6 +48,7 @@
     brightnessctl
     wireplumber
     playerctl
+    swww
 
     # Cursor theme
     bibata-cursors
@@ -67,6 +68,7 @@
     ".config/kitty/kitty.conf".source = ./config/kitty/kitty.conf;
     ".config/waybar/config".source = ./config/waybar/config.jsonc;
     ".config/waybar/style.css".source = ./config/waybar/style.css;
+    ".config/wallpapers/wallpaper.jpg".source = ./config/wallpapers/wallpaper.jpg;
   };
 
   # Configure waybar
