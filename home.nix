@@ -31,7 +31,7 @@
     slurp
     wl-clipboard
     xdg-utils
-    dolphin
+    thunar
     brightnessctl
     wpctl
     playerctl
