@@ -85,71 +85,12 @@
       settings = {
         "ui.systemUsesDarkTheme" = 1;
         "browser.in-content.dark-mode" = true;
+        # Disable sponsored content and recommendations
+        "extensions.pocket.enabled" = false;
+        "browser.newtabpage.activity-stream.showSponsored" = false;
+        "browser.newtabpage.activity-stream.showRecommendations" = false;
+        "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
       };
-    };
-  };
-
-  # Configure hyprlock
-  programs.hyprlock = {
-    enable = true;
-    settings = {
-      general = {
-        hide_cursor = true;
-        grace = 0;
-        no_fade_out = false;
-      };
-
-      background = [
-        {
-          monitor = "";
-          path = "$HOME/.config/wallpapers/wallpaper.jpg";
-          blur_passes = 3;
-          blur_size = 8;
-          noise = 0.02;
-          contrast = 0.8;
-          brightness = 0.8;
-          vibrancy = 0.1;
-          vibrancy_darkness = 0.0;
-        }
-      ];
-
-      input-field = [
-        {
-          monitor = "";
-          size = "200, 50";
-          position = "0, 0";
-          outline_thickness = 3;
-          dots_size = 0.2;
-          dots_spacing = 0.2;
-          dots_center = true;
-          outer_color = "0xFF1A1A1AFF";
-          inner_color = "0xFFC8C8C8FF";
-          font_color = "0xFF0A0A0AFF";
-          fade_on_empty = true;
-          fade_timeout = 1000;
-          placeholder_text = "<i>Password...</i>";
-          hide_input = false;
-          check_color = "0xFFCC8822FF";
-          fail_color = "0xFFCC3737FF";
-          fail_text = "<i>$FAIL</i>";
-          fail_timeout = 2000;
-          halign = "center";
-          valign = "center";
-        }
-      ];
-
-      label = [
-        {
-          monitor = "";
-          text = "cmd[update:1000] echo \"$(date +%H:%M:%S)\"";
-          color = "0xFFFFFFFFFF";
-          font_size = 55;
-          font_family = "FiraCode Nerd Font";
-          position = "0, 80";
-          halign = "center";
-          valign = "top";
-        }
-      ];
     };
   };
 
