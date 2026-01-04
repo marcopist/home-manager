@@ -28,14 +28,15 @@
         {
           monitor = "";
           size = "300, 60";
-          position = "0, -120";
+          position = "0, 80";
           outline_thickness = 4;
           dots_size = 0.33;
           dots_spacing = 0.15;
           dots_center = true;
           outer_color = "0xFFFFFFFF";
-          inner_color = "0xFF000000";
+          inner_color = "0x00000000";
           font_color = "0xFFFFFFFF";
+          font_family = "FiraCode Nerd Font";
           fade_on_empty = true;
           fade_timeout = 1000;
           placeholder_text = "<i>Password...</i>";
@@ -55,7 +56,7 @@
           text = "cmd[update:1000] echo \"$(date +%H:%M:%S)\"";
           color = "0xFFFFFFFF";
           font_size = 48;
-          font_family = "JetBrainsMono Nerd Font";
+          font_family = "FiraCode Nerd Font";
           position = "0, -80";
           halign = "center";
           valign = "center";
@@ -65,7 +66,7 @@
           text = "cmd[update:60000] echo \"$(date +\"%A, %B %d\")\"";
           color = "0xFFFFFFFF";
           font_size = 16;
-          font_family = "JetBrainsMono Nerd Font";
+          font_family = "FiraCode Nerd Font";
           position = "0, -30";
           halign = "center";
           valign = "center";
@@ -75,7 +76,7 @@
           text = "Welcome Marco";
           color = "0xFFFFFFFF";
           font_size = 24;
-          font_family = "JetBrainsMono Nerd Font";
+          font_family = "FiraCode Nerd Font";
           position = "0, 50";
           halign = "center";
           valign = "center";
