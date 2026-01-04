@@ -8,7 +8,22 @@
   # Environment variables for Wayland/Hyprland
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    GTK_THEME = "Adwaita:dark";
+    QT_STYLE_OVERRIDE = "adwaita-dark";
+    COLORFGBG = "15;8";
   };
+
+  home.pointerCursor = {
+    name = "Bibata-Modern-Classic";
+    size = 24;
+
+    package = pkgs.bibata-cursors;
+
+    # compatibility (GTK apps / XWayland often still use Xcursor)
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
 
   # User packages (including fonts)
   home.packages = with pkgs; [
@@ -36,7 +51,7 @@
     playerctl
 
     # Cursor theme
-    phinger-cursors
+    bibata-cursors
 
     # Fonts
     nerd-fonts.fira-code
