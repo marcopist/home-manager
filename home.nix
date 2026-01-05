@@ -1,5 +1,19 @@
 { config, pkgs, ... }:
 
+let
+  pkgs-24-05 = import (builtins.fetchTarball {
+    url = "https://github.com/NixOS/nixpkgs/archive/nixos-24.05.tar.gz";
+    sha256 = "0zydsqiaz8qi4zd63zsb2gij2p614cgkcaisnk11wjy3nmiq0x1s";
+  }) {
+    system = pkgs.system;
+    config = {
+      allowUnfree = true;
+      permittedInsecurePackages = [
+        "webkitgtk-4.0.37"
+      ];
+    };
+  };
+in
 {
   home.username = "marcopist";
   home.homeDirectory = "/home/marcopist";
@@ -8,6 +22,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
     "qtwebengine-5.15.19"
+    "libsoup-2.74.3"
   ];
   # Environment variables for Wayland/Hyprland
   home.sessionVariables = {
@@ -39,6 +54,23 @@
 
     # GUI applications
     spotify
+    (citrix_workspace.overrideAttrs (old: {
+      src = pkgs.requireFile {
+        name = "linuxx64-25.08.10.111.tar.gz";
+        sha256 = "6dddc2971051260be3256fb068a044df593d78f6a6fa7da91de4a3964be40d1a";
+        message = "Please add the Citrix tarball to the nix store.";
+      };
+      meta = old.meta // { broken = false; };
+      buildInputs = (old.buildInputs or []) ++ [ 
+        pkgs.fuse3 
+        pkgs-24-05.webkitgtk
+      ];
+      postInstall = ''
+        # Manually patch the binary to use libfuse3.so.4 instead of .3
+        chmod +w $out/opt/citrix-icaclient/ctxfuse
+        patchelf --replace-needed libfuse3.so.3 libfuse3.so.4 $out/opt/citrix-icaclient/ctxfuse
+      '' + (old.postInstall or "");
+    }))
 
     # Audio tools and enhancements
     alsa-utils
