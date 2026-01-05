@@ -5,6 +5,10 @@
   home.homeDirectory = "/home/marcopist";
   home.stateVersion = "25.11";
 
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "qtwebengine-5.15.19"
+  ];
   # Environment variables for Wayland/Hyprland
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
@@ -28,12 +32,22 @@
   # User packages (including fonts)
   home.packages = with pkgs; [
     # Development
+    vscode
     neovim
     nodejs
     gh
 
     # GUI applications
+    spotify
 
+    # Audio tools and enhancements
+    alsa-utils
+    alsa-plugins
+    easyeffects
+
+    # Display management
+    wdisplays
+    
     # Wayland/Hyprland tools
     hyprland
     waybar

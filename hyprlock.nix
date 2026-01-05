@@ -28,7 +28,7 @@
         {
           monitor = "";
           size = "300, 60";
-          position = "0, 180";
+          position = "0, -300";
           outline_thickness = 4;
           dots_size = 0.33;
           dots_spacing = 0.15;
