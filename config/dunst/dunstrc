@@ -1,0 +1,45 @@
+[global]
+monitor = 0
+follow = mouse
+width = 500
+height = (0, 300)
+offset = (10, 10)
+origin = top-right
+transparency = 0
+padding = 20
+horizontal_padding = 20
+frame_width = 1
+frame_color = "#1a1a1a"
+corner_radius = 0
+gap_size = 0
+
+# Visual settings
+font = monospace 14
+markup = full
+format = "<b>%s</b>\n%b"
+alignment = center
+word_wrap = yes
+stack_duplicates = yes
+hide_duplicate_count = yes
+show_indicators = no
+
+# Colors - Black minimalistic
+background = "#0a0a0a"
+foreground = "#ffffff"
+timeout = 3
+idle_threshold = 120
+
+[urgency_low]
+background = "#0a0a0a"
+foreground = "#ffffff"
+timeout = 3
+
+[urgency_normal]
+background = "#0a0a0a"
+foreground = "#ffffff"
+timeout = 5
+
+[urgency_critical]
+background = "#0a0a0a"
+foreground = "#ff6b6b"
+timeout = 0

@@ -1,0 +1,15 @@
+width=600
+height=400
+location=center
+anchor=center
+allow_markup=true
+allow_images=true
+image_size=32
+term=footclient
+filter_rate=100
+matching=fuzzy
+prompt=
+layer=overlay
+insensitive=true
+no_actions=true
+lines=20

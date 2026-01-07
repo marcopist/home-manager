@@ -76,10 +76,22 @@ in
     alsa-utils
     alsa-plugins
     easyeffects
+    vlc
 
     # Display management
     wdisplays
     
+    # Shell tools
+    starship
+    lsd
+    zoxide
+    bat
+    fd
+    ripgrep
+    du-dust
+    bottom
+    delta
+
     # Wayland/Hyprland tools
     hyprland
     waybar
@@ -96,7 +108,7 @@ in
     playerctl
     swww
     hyprlock
-    swayidle
+    hypridle
 
     # Cursor theme
     bibata-cursors
@@ -113,10 +125,26 @@ in
   # Link configuration files
   home.file = {
     ".config/hypr/hyprland.conf".source = ./config/hypr/hyprland.conf;
+    ".config/hypr/hypridle.conf".source = ./config/hypr/hypridle.conf;
+    ".config/hypr/waybar-autohide.sh".source = ./config/hypr/waybar-autohide.sh;
     ".config/kitty/kitty.conf".source = ./config/kitty/kitty.conf;
     ".config/waybar/config".source = ./config/waybar/config.jsonc;
+    ".config/bash/bashrc".source = ./config/bash/bashrc;
+  };
+
+  # Configure bash
+  programs.bash = {
+    enable = true;
+    initExtra = ''
+      source ~/.config/bash/bashrc
+    '';
     ".config/waybar/style.css".source = ./config/waybar/style.css;
     ".config/wallpapers/wallpaper.jpg".source = ./config/wallpapers/wallpaper.jpg;
+    ".config/wofi/config".source = ./config/wofi/config;
+    ".config/wofi/style.css".source = ./config/wofi/style.css;
+    ".config/dunst/dunstrc".source = ./config/dunst/dunstrc;
+    ".config/starship.toml".source = ./config/starship.toml;
+    ".config/lsd/config.yaml".source = ./config/lsd/config.yaml;
   };
 
   # Configure waybar
@@ -138,26 +166,6 @@ in
         "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
       };
     };
-  };
-
-  # Configure swayidle
-  services.swayidle = {
-    enable = true;
-    events = {
-      before-sleep = "${pkgs.hyprlock}/bin/hyprlock";
-      after-resume = "hyprctl dispatch dpms on";
-    };
-    timeouts = [
-      {
-        timeout = 900; # 15 minutes
-        command = "hyprctl dispatch dpms off";
-        resumeCommand = "hyprctl dispatch dpms on";
-      }
-      {
-        timeout = 1200; # 20 minutes
-        command = "${pkgs.systemd}/bin/systemctl suspend";
-      }
-    ];
   };
 
   # Enable Home Manager

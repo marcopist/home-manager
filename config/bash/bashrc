@@ -1,0 +1,30 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Initialize starship
+eval "$(starship init bash)"
+
+# Initialize zoxide (smarter cd)
+eval "$(zoxide init bash)"
+
+# Modern command aliases
+alias cat='bat'
+alias ls='lsd -lah'
+alias find='fd'
+alias grep='rg'
+alias du='dust'
+alias htop='btm'
+
+# Git diff with delta
+git config --global core.pager delta
+git config --global delta.navigate true
+
+# zoxide shorthand
+alias cd='z'
+alias cdi='zi'
+
+export PATH="$HOME/.local/bin:$PATH"

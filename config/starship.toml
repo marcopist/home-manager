@@ -1,0 +1,82 @@
+# Starship prompt config - sleek and modern
+
+# Add a blank line before each prompt
+add_newline = true
+
+# Main format - informative and clean
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$rust\
+$golang\
+$python\
+$nodejs\
+$cmd_duration
+$character"""
+
+# Directory - show up to 3 levels
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold cyan"
+
+# Git branch - show only if in a repo
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "bold purple"
+
+# Git status - compact
+[git_status]
+format = "([$all_status$ahead_behind]($style) )"
+style = "bold red"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+
+# Command character
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+# Language modules - show when relevant
+[rust]
+symbol = "🦀 "
+format = "[$symbol]($style)"
+style = "bold red"
+
+[golang]
+symbol = "🐹 "
+format = "[$symbol]($style)"
+style = "bold cyan"
+
+[python]
+symbol = "🐍 "
+format = "[$symbol]($style)"
+style = "bold blue"
+
+[nodejs]
+symbol = " "
+format = "[$symbol]($style)"
+style = "bold green"
+
+# Command duration - show if took more than 500ms
+[cmd_duration]
+min_time = 500
+format = "[took $duration]($style) "
+style = "bold yellow"
+
+# Username - always show
+[username]
+show_always = true
+format = "[$user]($style_user) "
+style_user = "bold green"
+
+# Hostname - always show
+[hostname]
+ssh_only = false
+format = "[@$hostname]($style) "
+style = "bold dimmed green"
