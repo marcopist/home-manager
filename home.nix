@@ -97,7 +97,7 @@
     ".config/hypr/hypridle.conf".source = ./config/hypr/hypridle.conf;
     ".config/hypr/waybar-autohide.sh".source = ./config/hypr/waybar-autohide.sh;
     ".config/kitty/kitty.conf".source = ./config/kitty/kitty.conf;
-    ".config/waybar/config".source = ./config/waybar/config.jsonc;
+    ".config/waybar/config.jsonc".source = ./config/waybar/config.jsonc;
     ".config/bash/bashrc".source = ./config/bash/bashrc;
     ".config/waybar/style.css".source = ./config/waybar/style.css;
     ".config/wallpapers/wallpaper.jpg".source = ./config/wallpapers/wallpaper.jpg;
