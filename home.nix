@@ -1,19 +1,5 @@
 { config, pkgs, ... }:
 
-let
-  pkgs-24-05 = import (builtins.fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/nixos-24.05.tar.gz";
-    sha256 = "0zydsqiaz8qi4zd63zsb2gij2p614cgkcaisnk11wjy3nmiq0x1s";
-  }) {
-    system = pkgs.system;
-    config = {
-      allowUnfree = true;
-      permittedInsecurePackages = [
-        "webkitgtk-4.0.37"
-      ];
-    };
-  };
-in
 {
   home.username = "marcopist";
   home.homeDirectory = "/home/marcopist";
@@ -54,7 +40,7 @@ in
 
     # GUI applications
     spotify
-    
+
     # Audio tools and enhancements
     alsa-utils
     alsa-plugins
