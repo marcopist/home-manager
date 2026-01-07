@@ -54,24 +54,7 @@ in
 
     # GUI applications
     spotify
-    (citrix_workspace.overrideAttrs (old: {
-      src = pkgs.requireFile {
-        name = "linuxx64-25.08.10.111.tar.gz";
-        sha256 = "6dddc2971051260be3256fb068a044df593d78f6a6fa7da91de4a3964be40d1a";
-        message = "Please add the Citrix tarball to the nix store.";
-      };
-      meta = old.meta // { broken = false; };
-      buildInputs = (old.buildInputs or []) ++ [ 
-        pkgs.fuse3 
-        pkgs-24-05.webkitgtk
-      ];
-      postInstall = ''
-        # Manually patch the binary to use libfuse3.so.4 instead of .3
-        chmod +w $out/opt/citrix-icaclient/ctxfuse
-        patchelf --replace-needed libfuse3.so.3 libfuse3.so.4 $out/opt/citrix-icaclient/ctxfuse
-      '' + (old.postInstall or "");
-    }))
-
+    
     # Audio tools and enhancements
     alsa-utils
     alsa-plugins
