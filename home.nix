@@ -88,7 +88,7 @@ in
     bat
     fd
     ripgrep
-    du-dust
+    dust
     bottom
     delta
 
