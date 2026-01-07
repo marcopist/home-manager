@@ -130,6 +130,13 @@ in
     ".config/kitty/kitty.conf".source = ./config/kitty/kitty.conf;
     ".config/waybar/config".source = ./config/waybar/config.jsonc;
     ".config/bash/bashrc".source = ./config/bash/bashrc;
+    ".config/waybar/style.css".source = ./config/waybar/style.css;
+    ".config/wallpapers/wallpaper.jpg".source = ./config/wallpapers/wallpaper.jpg;
+    ".config/wofi/config".source = ./config/wofi/config;
+    ".config/wofi/style.css".source = ./config/wofi/style.css;
+    ".config/dunst/dunstrc".source = ./config/dunst/dunstrc;
+    ".config/starship.toml".source = ./config/starship.toml;
+    ".config/lsd/config.yaml".source = ./config/lsd/config.yaml;
   };
 
   # Configure bash
@@ -138,13 +145,6 @@ in
     initExtra = ''
       source ~/.config/bash/bashrc
     '';
-    ".config/waybar/style.css".source = ./config/waybar/style.css;
-    ".config/wallpapers/wallpaper.jpg".source = ./config/wallpapers/wallpaper.jpg;
-    ".config/wofi/config".source = ./config/wofi/config;
-    ".config/wofi/style.css".source = ./config/wofi/style.css;
-    ".config/dunst/dunstrc".source = ./config/dunst/dunstrc;
-    ".config/starship.toml".source = ./config/starship.toml;
-    ".config/lsd/config.yaml".source = ./config/lsd/config.yaml;
   };
 
   # Configure waybar
