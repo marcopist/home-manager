@@ -1,154 +1,35 @@
 * {
-  border: none;
-  border-radius: 0;
-  font-family: "FiraCode Nerd Font", "Fira Code", monospace;
+  font-family: "FiraCode Nerd Font", "Font Awesome 6 Free";
   font-size: 13px;
-  min-height: 0;
 }
 
 window#waybar {
-  background-color: rgba(30, 30, 30, 0.9);
+  background-color: #000000;
   color: #ffffff;
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: margin-top 300ms ease-out;
-}
-
-window#waybar.hidden {
-  margin-top: -40px;
-}
-
-#workspaces {
-  background: transparent;
-  margin: 0 10px;
-  padding: 0;
-  font-weight: bold;
 }
 
 #workspaces button {
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  border-radius: 5px;
-  padding: 5px 12px;
-  margin: 5px 3px;
-  transition: all 200ms ease-in-out;
-  font-weight: 600;
-}
-
-#workspaces button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  padding: 0 6px;
+  color: #888888;
 }
 
 #workspaces button.active {
-  background: rgba(100, 200, 255, 0.8);
-  color: #ffffff;
-  box-shadow: 0 0 15px rgba(100, 200, 255, 0.5);
-}
-
-#workspaces button.urgent {
-  background: rgba(255, 100, 100, 0.8);
   color: #ffffff;
 }
 
-#clock {
-  background: transparent;
-  padding: 0 15px;
-  margin: 0 5px;
-  font-weight: 600;
-}
-
-#submap {
-  background: rgba(255, 200, 0, 0.8);
-  color: #000000;
-  padding: 0 10px;
-  margin: 5px;
-  border-radius: 5px;
-  font-weight: 600;
-}
-
-#cpu,
-#memory,
-#temperature,
-#battery,
+#clock,
 #network,
+#bluetooth,
 #pulseaudio,
-#wireplumber,
+#battery,
 #tray {
-  background: transparent;
   padding: 0 10px;
-  margin: 0 5px;
-  color: #ffffff;
-}
-
-#cpu {
-  color: #64c8ff;
-}
-
-#memory {
-  color: #64ffb4;
-}
-
-#temperature {
-  color: #ffb464;
-}
-
-#temperature.critical {
-  color: #ff6464;
-}
-
-#battery {
-  color: #b4ff64;
 }
 
 #battery.warning {
-  color: #ffb464;
+  color: #ffcc00;
 }
 
 #battery.critical {
-  color: #ff6464;
-}
-
-#battery.charging {
-  color: #64c8ff;
-}
-
-#network {
-  color: #c864ff;
-}
-
-#network.disconnected {
-  color: #ff6464;
-}
-
-#pulseaudio,
-#wireplumber {
-  color: #ffc864;
-}
-
-#pulseaudio.muted,
-#wireplumber.muted {
-  color: #ff6464;
-}
-
-#tray {
-  padding: 0 15px;
-}
-
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-}
-
-tooltip {
-  background: rgba(20, 20, 20, 0.95);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  padding: 10px;
-  font-family: "FiraCode Nerd Font", "Fira Code", monospace;
+  color: #ff4444;
 }
